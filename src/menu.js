@@ -6,6 +6,7 @@ function createMenu() {
     menuHead.textContent = "Discover Your Best Dishes"
 
     menuDiv.appendChild(menuHead)
+
     menuDiv.appendChild(createmenuItems('eru', "Eru is a soup from Cameroon. It is a specialty of the Bayangi people, of the Manyu region in southwestern Cameroon. It is vegetable soup made up of finely shredded leaves of the eru or okok.", 1500) )
     menuDiv.appendChild(createmenuItems('fufu', 'Fufu is a popular African food. In Twi, fufu means "mash or mix" for a soft and doughy staple food ', 500))
 
@@ -37,4 +38,11 @@ function createmenuItems (foodName, description, price){
 
     return menuItem
 }
-export default createMenu
+
+function displayMenu () {
+        let section = document.getElementsByClassName('main-content')[0]
+        section.textContent = ""
+        section.appendChild(createMenu());
+    
+}
+export default displayMenu

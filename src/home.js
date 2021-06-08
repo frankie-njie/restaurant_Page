@@ -20,4 +20,11 @@ function createHome (){
     return homeDiv
 }
 
-export default createHome
+function displayHome (){
+    let section = document.getElementsByClassName('main-content')[0]
+    section.innerHTML = "";
+    section.appendChild(createHome());
+
+}
+
+export default displayHome

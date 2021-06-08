@@ -26,4 +26,10 @@ function createContact (){
     return contactDiv
 }
 
-export default createContact
+function displayContact() {
+    let section = document.getElementsByClassName('main-content')[0]
+    section.textContent = ""
+    section.appendChild(createContact());
+}
+
+export default displayContact
