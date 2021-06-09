@@ -8,7 +8,7 @@ function createHeader() {
     const mainHeader = document.createElement('header');
 
     const restauName = document.createElement('h1');
-    restauName.textContent = "Triver";
+    restauName.textContent = "Triver Restuarant";
 
     mainHeader.appendChild(restauName);
     mainHeader.appendChild(createNav());
@@ -90,4 +90,6 @@ function loadPage() {
     // mainContent.appendChild(createMenu());
     // mainContent.appendChild(createContact())
     mainContent.appendChild(createFooter())
+
+    setActiveButton(document.querySelectorAll('.nav-list')[0])
 }
