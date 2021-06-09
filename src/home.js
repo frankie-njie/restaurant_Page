@@ -6,8 +6,12 @@ function createHome (){
     welcome.textContent = "Know About Our Restaurant";
 
     const image = document.createElement('img');
-    image.src = ''
-    image.alt = 'welcome pic'
+    image.src = 'images/welcome.jpg'
+    image.alt = 'welcome pic';
+    image.width = '500'
+    image.height = '400'
+    image.style.objectFit = 'cover'
+    // image.object
     // width="250px" height="200px"
 
     const homeContent = document.createElement('p');

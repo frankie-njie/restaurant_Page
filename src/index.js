@@ -70,14 +70,27 @@ function createFooter() {
 }
 
 function setActiveButton(button) {
-    const buttons = document.getElementsByTagName('button');
-
+    const buttons = document.querySelectorAll('.nav-list')
     for (let i = 0; i < buttons.length; i++) {
-        if (button === this) {
-            button.classList.add('active')
-        }
-        button.classList.remove('active')
+        buttons[i].addEventListener('click', function(e){
+            if(button === e.target){
+                // e.target.classList.add('active')
+                console.log(e.target.innerHTML);
+            }
+            
+        })
+        // if (button) {
+        //     button.classList.add('active')
+        // }
+        // button.classList.remove('active')
     };
+    
+    // buttons.forEach(button => {
+    //     if(button !== this){
+    //         button.classList.remove('active')
+    //     }
+    //     button.classList.add('active')
+    // })
 }
 
 
@@ -85,11 +98,8 @@ function loadPage() {
     let mainContent = document.getElementById('content')
     mainContent.appendChild(createHeader());
     mainContent.appendChild(createMain());
-    displayHome()
-    // mainContent.appendChild(createHome());
-    // mainContent.appendChild(createMenu());
-    // mainContent.appendChild(createContact())
     mainContent.appendChild(createFooter())
 
-    setActiveButton(document.querySelectorAll('.nav-list')[0])
+    displayHome()
+    setActiveButton(document.getElementsByClassName('nav-list')[0]);
 }
