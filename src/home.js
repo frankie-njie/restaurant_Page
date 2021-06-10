@@ -15,7 +15,7 @@ function createHome (){
     // width="250px" height="200px"
 
     const homeContent = document.createElement('p');
-    homeContent.textContent = "So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.";
+    homeContent.textContent = "Triver Restaurant is a best quality African dish restaurant, where you can get All your african dishes served. For all the african dish lovers here is a place where you can enjoy all your dishes craved and to remind you its top quality. ";
 
     homeDiv.appendChild(welcome);
     homeDiv.appendChild(image);

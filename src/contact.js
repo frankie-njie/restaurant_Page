@@ -5,6 +5,11 @@ function createContact (){
     let contactHead = document.createElement('h1');
     contactHead.textContent = "How to Get to Us";
 
+    let contactImg = document.createElement('img');
+    contactImg.src = 'images/contact-us.png';
+    contactImg.width = 500;
+    contactImg.style.objectFit = 'cover'
+
     let phone = document.createElement('h4');
     phone.textContent = 'Phone'
 
@@ -18,6 +23,7 @@ function createContact (){
     addressText.textContent = "Douala, Cameroon"
 
     contactDiv.appendChild(contactHead)
+    contactDiv.appendChild(contactImg)
     contactDiv.appendChild(phone)
     contactDiv.appendChild(phoneText)
     contactDiv.appendChild(address)
